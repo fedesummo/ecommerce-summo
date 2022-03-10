@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+// Importing bootstrap stylesheet.
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+// Importing react-bootstrap components.
+import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import CartWidget from "./components/CartWidget/CartWidget";
+
+// Importing project components.
+import ItemCard from "./components/ItemCard/ItemCard"
+import ItemsGrid from "./components/ItemCard/ItemsGrid";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand href="#home">My eCommerce</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#features">Products</Nav.Link>
+            <Nav.Link href="#pricing">About us</Nav.Link>
+          </Nav>
+          <CartWidget />
+        </Container>
+      </Navbar>
+      <main>
+        <ItemsGrid/>
+      </main>
+    </>
   );
-}
+};
 
 export default App;

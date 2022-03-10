@@ -1,0 +1,41 @@
+[
+    {
+        "id": "0",
+        "name": "Samsung Galaxy Z Flip3 5G",
+        "shortName": "sam-flip-3",
+        "specs": {
+            "os": "Android 12",
+            "display": "6.7 inches",
+            "battery": "3300 mAh",
+            "memory": "256GB, 8GB"
+        },
+        "price": "",
+        "stock": "20"
+    },
+    {
+        "id": "1",
+        "name": "iPhone 12 Pro",
+        "shortName": "iph-12-pro",
+        "specs": {
+            "os": "iOS 15",
+            "display": "6.1 inches",
+            "battery": "2815 mAh",
+            "memory": "512GB, 6GB"
+        },
+        "price": "",
+        "stock": "15"
+    },
+    {
+        "id": "2",
+        "name": "Xiaomi Mi 11 Pro",
+        "shortName": "xia-11-pro",
+        "specs": {
+            "os": "Android 11",
+            "display": "6.81 inches",
+            "battery": "5000 mAh",
+            "memory": "256GB, 12GB"
+        },
+        "price": "",
+        "stock": "50"
+    }
+]
