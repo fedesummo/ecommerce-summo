@@ -3,11 +3,8 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 // Importing project components.
 import ItemCard from "../ItemCard/ItemCard";
-// Importing JSON data.
-import * as data from "../../assets/data/data.json";
 
-const ItemsList = () => {
-  const { default: products } = data;
+const ItemsList = ({products}) => {
   return (
     <Row style={{ width: "100vw" }}>
       {products.map((element) => (

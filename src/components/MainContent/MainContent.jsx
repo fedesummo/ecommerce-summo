@@ -1,10 +1,10 @@
 // Importing project components.
-import ItemsList from "../ItemsList/ItemsList";
+import ItemsListContainer from "../ItemListContainer/ItemListContainer"
 
 const MainContent = () => {
   return (
     <main>
-      <ItemsList />
+      <ItemsListContainer />
     </main>
   );
 };
