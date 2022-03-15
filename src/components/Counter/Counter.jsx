@@ -25,11 +25,11 @@ const Counter = ({ initialStock }) => {
     <>
     <Container>
       <Button variant="success" onClick={increment}>
-        Increment
+        +
       </Button>
       <span className="h3">Units: {quantity}</span>
       <Button variant="danger" onClick={decrement}>
-        Decrement
+        -
       </Button>
     </Container>
     <Container>
