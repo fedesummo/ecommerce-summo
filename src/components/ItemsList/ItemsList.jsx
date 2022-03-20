@@ -3,7 +3,6 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 // Importing project components.
 import ItemCardContainer from "../ItemCardContainer/ItemCardContainer";
-import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 
 const ItemsList = ({products}) => {
   console.log(products)
@@ -16,7 +15,6 @@ const ItemsList = ({products}) => {
         </Col>
       ))}
     </Row>
-    <ItemDetailContainer data={products[0]}/>
     </>
   );
 };
