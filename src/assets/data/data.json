@@ -3,13 +3,15 @@
         "id": "0",
         "name": "Samsung Galaxy Z Flip3 5G",
         "shortName": "sam-flip-3",
+        "category": "smartphones",
+        "imgUrl": "https://images.fravega.com/f500/6378ae4aa084513db8be004cc70dc660.jpg",
         "specs": {
             "os": "Android 12",
             "display": "6.7 inches",
             "battery": "3300 mAh",
             "memory": "256GB, 8GB"
         },
-        "description": "A full-sized smartphone that folds to fit small-sized pockets. This visually awesome and 4.2'' folded compact design delivers the ultimate portability for every move you make.",
+        "description": "",
         "price": "999",
         "stock": "20"
     },
@@ -17,6 +19,8 @@
         "id": "1",
         "name": "iPhone 12 Pro",
         "shortName": "iph-12-pro",
+        "category": "smartphones",
+        "imgUrl": "https://www.macstation.com.ar/img/productos/small/2183-1.jpg",
         "specs": {
             "os": "iOS 15",
             "display": "6.1 inches",
@@ -30,6 +34,8 @@
         "id": "2",
         "name": "Xiaomi Mi 11 Pro",
         "shortName": "xia-11-pro",
+        "category": "smartphones",
+        "imgUrl": "https://phonesdata.com/files/models/Xiaomi-12-Pro-563.jpg",
         "specs": {
             "os": "Android 11",
             "display": "6.81 inches",
@@ -38,5 +44,35 @@
         },
         "price": "",
         "stock": "50"
+    },
+    {
+        "id": "3",
+        "name": "Apple Watch Series 7",
+        "shortName": "apple-watch-s7",
+        "category": "smartwatches",
+        "imgUrl": "https://stylewatch.vtexassets.com/arquivos/ids/201390-800-auto?width=800&height=auto&aspect=true",
+        "specs": {
+            "os": "watchOS 8.5",
+            "display": "1.9 inches",
+            "battery": "309mAh",
+            "memory": "32GB, "
+        },
+        "price": "399",
+        "stock": "5"
+    },
+    {
+        "id": "4",
+        "name": "Galaxy Watch4",
+        "shortName": "sam-watch-5",
+        "category": "smartwatches",
+        "imgUrl": "https://images.fravega.com/f300/8235c1991867e2087cc1d666dbe1c1bc.jpg.webp",
+        "specs": {
+            "os": "Android Wear OS",
+            "display": "1.4 inches",
+            "battery": "361mAh",
+            "memory": "16GB, 1.5"
+        },
+        "price": "239.99",
+        "stock": "15"
     }
 ]

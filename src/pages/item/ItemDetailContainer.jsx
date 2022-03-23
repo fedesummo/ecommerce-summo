@@ -2,11 +2,18 @@
 import { useEffect, useState } from "react";
 import * as data from "../../assets/data/data.json";
 // Importing project components.
-import ItemDetail from "../ItemDetail/ItemDetail";
-import Loading from "../Loading/Loading";
+import ItemDetail from "./ItemDetail";
+import Loading from "../../components/Loading/Loading";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
   const { default: products } = data;
+  const { productId } = useParams();
+  const product = products.filter(
+    (element) => {
+      return (element.id == productId) && element
+    }
+  )
   const [isReady, setIsReady] = useState(false);
   useEffect(() => {
     return new Promise((res, rej) => {
@@ -17,8 +24,8 @@ const ItemDetailContainer = () => {
       console.log(err);
     });
   });
-  // Returning the item detail of the first product.
-  return <>{isReady ? <ItemDetail data={products[0]} /> : <Loading />}</>;
+  // Returning the item detail of the product.
+  return <>{isReady ? <ItemDetail data={product[0]} /> : <Loading />}</>;
 };
 
 export default ItemDetailContainer;

@@ -4,17 +4,19 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 const ItemDetail = ({ data }) => {
+  console.log(data)
   return (
     <Card style={{ textAlign: "center", width: "55rem" }}>
       <Card.Header>{data.name}</Card.Header>
       <Row>
         <Col>
-          <Card.Img src={`${data.shortName}.jpg`} />
+          <Card.Img src={data.imgUrl} />
         </Col>
         <Col>
           <Card.Body>
           <Card.Title><i className="bi bi-text-left"></i> Description</Card.Title>
-          <Card.Text>{data.description}</Card.Text>
+          <Card.Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Card.Text>
+          {/* <Card.Text>{data.description}</Card.Text> */}
             <Card.Title><i class="bi bi-gear"></i> Specs</Card.Title>
             <Card.Text className="mb-0"><i>Operative System:</i> {data.specs.os}</Card.Text>
             <Card.Text className="mb-0"><i>Display:</i> {data.specs.display}</Card.Text>
