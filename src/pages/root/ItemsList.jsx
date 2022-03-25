@@ -8,7 +8,7 @@ const ItemsList = ({products}) => {
   console.log(products)
   return (
     <>
-    <Row style={{ width: "100vw" }}>
+    <Row className="me-3" md="4">
       {products.map((element) => (
         <Col key={element.id}>
           <ItemCardContainer productData={element} />

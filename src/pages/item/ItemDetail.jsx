@@ -2,11 +2,12 @@
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import CounterContainer from "../../components/Counter/CounterContainer";
 
 const ItemDetail = ({ data }) => {
   console.log(data)
   return (
-    <Card style={{ textAlign: "center", width: "55rem" }}>
+    <Card className="my-5 mx-auto" style={{ textAlign: "center", width: "55rem" }}>
       <Card.Header>{data.name}</Card.Header>
       <Row>
         <Col>
@@ -24,6 +25,7 @@ const ItemDetail = ({ data }) => {
             <Card.Text><i>Memory:</i> {data.specs.memory}</Card.Text>
             <Card.Title><i className="bi bi-truck"></i> Shop now and get free shipping!</Card.Title>
             <Card.Title><i className="bi bi-credit-card"></i> We accept all credit and debit cards!</Card.Title>
+            <CounterContainer initialStock={data.stock}/>
           </Card.Body>
         </Col>
       </Row>

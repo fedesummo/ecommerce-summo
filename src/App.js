@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import LayoutContainer from "./layout/LayoutContainer";
 import ItemListContainer from "./pages/root/ItemListContainer";
 import ItemDetailContainer from "./pages/item/ItemDetailContainer"
+import CartContainer from "./pages/cart/CartContainer";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route index element={<ItemListContainer/>}/>
           <Route path="category/:category" element={<ItemListContainer/>}/>
           <Route path="item/:productId" element={<ItemDetailContainer/>}/>
+          <Route path="cart" element={<CartContainer/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

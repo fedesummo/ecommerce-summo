@@ -27,7 +27,7 @@
             "battery": "2815 mAh",
             "memory": "512GB, 6GB"
         },
-        "price": "",
+        "price": "979",
         "stock": "15"
     },
     {
@@ -42,7 +42,7 @@
             "battery": "5000 mAh",
             "memory": "256GB, 12GB"
         },
-        "price": "",
+        "price": "659",
         "stock": "50"
     },
     {
@@ -70,9 +70,24 @@
             "os": "Android Wear OS",
             "display": "1.4 inches",
             "battery": "361mAh",
-            "memory": "16GB, 1.5"
+            "memory": "16GB, 1.5GB"
         },
         "price": "239.99",
         "stock": "15"
+    },
+    {
+        "id": "6",
+        "name": "Mi Band 6",
+        "shortName": "xia-band-6",
+        "category": "smartwatches",
+        "imgUrl": "https://i01.appmifile.com/webfile/globalweb/chenyang/mi-smart-band-6-black.png",
+        "specs": {
+            "os": "MIUI Band OS 10",
+            "display": "1.57 inches",
+            "battery": "125mAh",
+            "memory": "16MB, 0.5MB"
+        },
+        "price": "39.99",
+        "stock": "25"
     }
 ]
