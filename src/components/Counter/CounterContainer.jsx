@@ -1,10 +1,9 @@
 // Importing react hooks.
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 // Importing project component.
 import Counter from "./Counter"
 
-const CounterContainer = ({initialStock}) => {
+const CounterContainer = ({initialStock, setIsAddedToCart}) => {
   // Setting component state.
   const [stock, setStock] = useState(initialStock);
   const [quantity, setQuantity] = useState(0);
@@ -21,9 +20,8 @@ const CounterContainer = ({initialStock}) => {
       setStock(stock + 1);
     }
   };
-  const navigate = useNavigate()
   return (
-    <Counter stock={stock} increment={increment} decrement={decrement} quantity={quantity} navigate={navigate}/>
+    <Counter stock={stock} increment={increment} decrement={decrement} quantity={quantity} setIsAddedToCart={setIsAddedToCart}/>
   )
 }
 

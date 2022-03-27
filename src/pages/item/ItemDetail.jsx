@@ -3,8 +3,9 @@ import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import CounterContainer from "../../components/Counter/CounterContainer";
+import { Link } from "react-router-dom";
 
-const ItemDetail = ({ data }) => {
+const ItemDetail = ({ data, isAddedToCart, setIsAddedToCart }) => {
   console.log(data)
   return (
     <Card className="my-5 mx-auto" style={{ textAlign: "center", width: "55rem" }}>
@@ -25,7 +26,11 @@ const ItemDetail = ({ data }) => {
             <Card.Text><i>Memory:</i> {data.specs.memory}</Card.Text>
             <Card.Title><i className="bi bi-truck"></i> Shop now and get free shipping!</Card.Title>
             <Card.Title><i className="bi bi-credit-card"></i> We accept all credit and debit cards!</Card.Title>
-            <CounterContainer initialStock={data.stock}/>
+            {isAddedToCart
+              ? <Link to="/cart" className="btn btn-outline-dark mt-2">Go to Cart</Link>
+              : <CounterContainer initialStock={data.stock} isAddedToCart={isAddedToCart} setIsAddedToCart={setIsAddedToCart}/>
+            }
+            
           </Card.Body>
         </Col>
       </Row>

@@ -15,6 +15,7 @@ const ItemDetailContainer = () => {
     }
   )
   const [isReady, setIsReady] = useState(false);
+  const [isAddedToCart, setIsAddedToCart] = useState(false)
   useEffect(() => {
     return new Promise((res, rej) => {
       setTimeout(() => {
@@ -25,7 +26,7 @@ const ItemDetailContainer = () => {
     });
   });
   // Returning the item detail of the product.
-  return <>{isReady ? <ItemDetail data={product[0]} /> : <Loading />}</>;
+  return <>{isReady ? <ItemDetail data={product[0]} isAddedToCart={isAddedToCart} setIsAddedToCart={setIsAddedToCart} /> : <Loading />}</>;
 };
 
 export default ItemDetailContainer;

@@ -44,23 +44,22 @@ import { Link } from "react-router-dom";
 
 // export default Counter;
 
-const Counter = ({ quantity, increment, decrement, stock }) => {
+const Counter = ({ quantity, increment, decrement, stock, setIsAddedToCart }) => {
   return (
-    <Container className="d-flex align-items-center">
-      <Container>
-        <Container
-          className="d-flex text-center gap-3 justify-content-center"
-          style={{ fontSize: "1.5rem" }}
-        >
-          <i className="bi bi-plus-circle" onClick={increment} />
-          <span>{quantity}</span>
-          <i className="bi bi-x-circle" onClick={decrement} />
-        </Container>
-        <Container>
-          <span>Remaining stock: {stock}</span>
-        </Container>
-      </Container>
-      {quantity > 0 && <Link to="/cart" className="text-nowrap btn btn-outline-dark">Go to Cart</Link>}
+    <Container className="justify-content-center">
+      <Row className="g-0">
+        <Col>
+          <Row className="g-0" style={{ fontSize: "1.5rem" }}>
+            <Col><i className="bi bi-plus-circle" onClick={increment} /></Col>
+            <Col><span>{quantity}</span></Col>
+            <Col><i className="bi bi-x-circle" onClick={decrement} /></Col>
+          </Row>
+          <Row><span>Remaining stock: {stock}</span></Row>
+        </Col>
+        {
+          quantity > 0 && <Col className="my-auto"> <Button variant="outline-dark" className="text-nowrap" onClick={ () => setIsAddedToCart(true) }>Add to Cart</Button> </Col>
+        }
+      </Row>
     </Container>
   );
 };
