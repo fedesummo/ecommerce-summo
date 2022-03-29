@@ -12,7 +12,7 @@ const NavBar = () => {
     <Navbar bg="dark" variant="dark">
       <Container>
       {/* bi-mask */}
-        <Navbar.Brand><Link className="text-light text-decoration-none" to="/">myEc<i className="bi bi-tropical-storm"/>
+        <Navbar.Brand><Link className="text-light text-decoration-none" to="/">techC<i className="bi bi-tropical-storm"/>
 mmerce</Link></Navbar.Brand>
         <Nav className="me-auto">
           <NavLink className="nav-link" to="/category/smartphones">smartphones</NavLink>

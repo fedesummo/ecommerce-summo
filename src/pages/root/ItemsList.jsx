@@ -5,7 +5,6 @@ import Row from "react-bootstrap/Row";
 import ItemCardContainer from "./ItemCard/ItemCardContainer";
 
 const ItemsList = ({products}) => {
-  console.log(products)
   return (
     <>
     <Row className="me-3" md="4">
