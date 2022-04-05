@@ -1,10 +1,6 @@
-// Importing react-router-dom components.
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-// Importing bootstrap stylesheet.
 import "bootstrap/dist/css/bootstrap.min.css";
-// Importing context provider.
 import { CartContextProvider } from "./context/CartContext";
-// Importing project components.
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LayoutContainer from "./layout/LayoutContainer";
 import ItemListContainer from "./pages/root/ItemListContainer";
 import ItemDetailContainer from "./pages/item/ItemDetailContainer";
