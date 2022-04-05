@@ -18,11 +18,11 @@ const ItemDetail = ({ data, isAddedToCart, setIsAddedToCart }) => {
           <Card.Title><i className="bi bi-text-left"></i> Description</Card.Title>
           <Card.Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Card.Text>
           {/* <Card.Text>{data.description}</Card.Text> */}
-            <Card.Title><i className="bi bi-gear"></i> Specs</Card.Title>
+            {/* <Card.Title><i className="bi bi-gear"></i> Specs</Card.Title>
             <Card.Text className="mb-0"><i>Operative System:</i> {data.specs.os}</Card.Text>
             <Card.Text className="mb-0"><i>Display:</i> {data.specs.display}</Card.Text>
             <Card.Text className="mb-0"><i>Battery:</i> {data.specs.battery}</Card.Text>
-            <Card.Text><i>Memory:</i> {data.specs.memory}</Card.Text>
+            <Card.Text><i>Memory:</i> {data.specs.memory}</Card.Text> */}
             <Card.Title><i className="bi bi-truck"></i> Shop now and get free shipping!</Card.Title>
             <Card.Title><i className="bi bi-credit-card"></i> We accept all credit and debit cards!</Card.Title>
             {isAddedToCart

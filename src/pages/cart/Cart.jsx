@@ -28,10 +28,10 @@ const Cart = () => {
                                 </Col>
                                 <Col>
                                   <Row className="h4">{element.item.name}</Row>
-                                  <Row>{element.item.specs.os}</Row>
+                                  {/* <Row>{element.item.specs.os}</Row>
                                   <Row>{element.item.specs.display}</Row>
                                   <Row>{element.item.specs.memory}</Row>
-                                  <Row>{element.item.specs.battery}</Row>
+                                  <Row>{element.item.specs.battery}</Row> */}
                                 </Col>
                               </Row>
                             </td>
@@ -59,38 +59,9 @@ const Cart = () => {
           <img src={sadCartImg} style={{maxWidth: "10rem"}}/>
           <Link as="button" to="/" className="btn btn-outline-dark">Explore the Store</Link>
         </Stack>
-      // : <Container>
-      //     <Row>
-      //       <h2>Your cart is empty!</h2>
-      //     </Row>
-      //     <Row>
-      //       <img src={sadCartImg} style={{maxWidth: "10rem"}}/>
-      //     </Row>
-      //     <Row>
-      //       <Button variant="outline-dark" style={{width: "fit-content"}}>
-      //         Explore the Store
-      //       </Button>
-      //     </Row>
-      //   </Container>
     }
     
   </>)
-  // return (
-  //   <>
-  //   <div>
-  //     <h2>Cart:</h2>
-  //     {
-  //     (cart && cart.length > 0) 
-  //       ? <ul>
-  //         {cart.map(element => <li key={element.item.id}>Product: {element.item.name}. Quantity: {element.quantity} <button onClick={ () => removeItem(element.item.id) }><i className="bi bi-trash3-fill"/></button> </li>)}
-  //         </ul>
-  //       : <p>The cart is empty</p>
-  //     }
-  //   </div>
-    
-  //   <button onClick={clear}>Clear Cart</button>
-  //   </>
-  // )
 }
 
 export default Cart

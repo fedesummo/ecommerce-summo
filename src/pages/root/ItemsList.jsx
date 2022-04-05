@@ -1,7 +1,5 @@
-// Importing bootstrap components.
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-// Importing project components.
 import ItemCardContainer from "./ItemCard/ItemCardContainer";
 
 const ItemsList = ({products}) => {
