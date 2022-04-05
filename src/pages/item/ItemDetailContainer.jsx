@@ -5,6 +5,7 @@ import * as data from "../../assets/data/data.json";
 import ItemDetail from "./ItemDetail";
 import Loading from "../../components/Loading/Loading";
 import { useParams } from "react-router-dom";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   const { default: products } = data;
@@ -25,7 +26,23 @@ const ItemDetailContainer = () => {
       console.log(err);
     });
   });
-  // Returning the item detail of the product.
+
+  const getById = async (id) => {
+    try {
+      const db = getFirestore()
+      const queryDoc = doc(db, "items", id)
+      const res = await getDoc(queryDoc)
+      console.log(res.data())
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  useEffect(
+    () => getById("xJldjpGq2fRFTO4qZWwq"),
+    []
+  )
+  
   return <>{isReady ? <ItemDetail data={product[0]} isAddedToCart={isAddedToCart} setIsAddedToCart={setIsAddedToCart} /> : <Loading />}</>;
 };
 
