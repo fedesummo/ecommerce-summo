@@ -42,21 +42,15 @@ export const CartContextProvider = ({children}) => {
     // Check if an item is in cart.
     const isInCart = id => cart.filter( element => element.item.id == id ).length > 0 ? true : false
 
-    const calculateTotalPrice = () => {
-        let totalPrice = 0
-        cart.map(
-            element => totalPrice += element.quantity * parseFloat(element.item.price)
-        )
-        return totalPrice
-    }
+    const totalPrice = () => cart.reduce(
+        (acum, element) => acum + (element.quantity * element.item.price),
+        0
+    )
 
-    const totalItems = () => {
-        let totalItems = 0
-        cart.map(
-            element => totalItems += element.quantity
-        )
-        return totalItems
-    }
+    const totalItems = () => cart.reduce(
+        (acum, element) => acum + element.quantity,
+        0
+    )
 
-    return <CartContext.Provider value={{cart, addItem, clear, isInCart, removeItem, calculateTotalPrice, totalItems}}> {children} </CartContext.Provider>
+    return <CartContext.Provider value={{cart, addItem, clear, isInCart, removeItem, totalPrice, totalItems}}> {children} </CartContext.Provider>
 }

@@ -4,9 +4,8 @@ import { Link } from "react-router-dom"
 import { useCartContext } from "../../context/CartContext"
 import sadCartImg from "./sad-cart.png"
 
-const Cart = () => {
-  // Importing functions and variables from cart context.
-  const { clear, removeItem, cart, calculateTotalPrice } = useCartContext()
+const Cart = ({getOrder}) => {
+  const { clear, removeItem, cart, totalPrice } = useCartContext()
   return(<>
     {(cart.length > 0)  
       ? <Table>
@@ -49,8 +48,8 @@ const Cart = () => {
             <tr>
               <th></th>
               <th></th>
-              <th>Total Price: {calculateTotalPrice()}</th>
-              <th></th>
+              <th>Total Price: <span className="fw-normal">${totalPrice()} USD</span></th>
+              <th><Button onClick={getOrder} >Get Bill</Button></th>
             </tr>
           </tfoot>
         </Table>
