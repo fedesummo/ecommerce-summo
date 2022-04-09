@@ -8,11 +8,6 @@ export const CartContextProvider = ({children}) => {
 
     const [cart, setCart] = useState([])
 
-    useEffect(
-        () => console.log("Cart: ", cart),
-        [cart]
-    )
-
     // Add an item to cart.
     const addItem = (item, quantity) => {
         // Filtering the cart to know if the product already exist.

@@ -1,14 +1,14 @@
-// Importing context.
-import { Col, Row, Table, Button, Container, Stack } from "react-bootstrap"
-import { Link } from "react-router-dom"
-import { useCartContext } from "../../context/CartContext"
-import sadCartImg from "./sad-cart.png"
+import { useCartContext } from "../../../context/CartContext"
+import Button from "react-bootstrap/Button"
+import Table from "react-bootstrap/Table"
+import Col from "react-bootstrap/Col"
+import Row from "react-bootstrap/Row"
 
-const Cart = ({getOrder}) => {
-  const { clear, removeItem, cart, totalPrice } = useCartContext()
-  return(<>
-    {(cart.length > 0)  
-      ? <Table>
+const CartDetail = () => {
+  const { removeItem, cart, totalPrice } = useCartContext()
+  
+  return(
+  <Table>
           <thead>
             <tr>
               <th>Product Detail</th>
@@ -49,18 +49,10 @@ const Cart = ({getOrder}) => {
               <th></th>
               <th></th>
               <th>Total Price: <span className="fw-normal">${totalPrice()} USD</span></th>
-              <th><Button onClick={getOrder} >Get Bill</Button></th>
             </tr>
           </tfoot>
         </Table>
-      : <Stack className="align-items-center" gap={3}>
-          <p className="h2 m-0" >Your cart is empty!</p>
-          <img src={sadCartImg} style={{maxWidth: "10rem"}}/>
-          <Link as="button" to="/" className="btn btn-outline-dark">Explore the Store</Link>
-        </Stack>
-    }
-    
-  </>)
+  )
 }
 
-export default Cart
+export default CartDetail
