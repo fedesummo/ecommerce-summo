@@ -26,16 +26,16 @@ const CartDetail = () => {
                                   <img style={{maxHeight: "7rem"}} src={element.item.imgUrl} />
                                 </Col>
                                 <Col>
-                                  <Row className="h4">{element.item.name}</Row>
-                                  {/* <Row>{element.item.specs.os}</Row>
+                                  <Row className="h5">{element.item.name}</Row>
+                                  <Row>{element.item.specs.os}</Row>
                                   <Row>{element.item.specs.display}</Row>
                                   <Row>{element.item.specs.memory}</Row>
-                                  <Row>{element.item.specs.battery}</Row> */}
+                                  <Row>{element.item.specs.battery}</Row>
                                 </Col>
                               </Row>
                             </td>
                             <td>{element.quantity}</td>
-                            <td>{ element.quantity * element.item.price }</td>
+                            <td>${ element.quantity * element.item.price } USD</td>
                             <td>
                               <Button variant="outline-dark" onClick={() => removeItem(element.item.id)}>
                                 <i className="bi bi-trash3-fill"/>

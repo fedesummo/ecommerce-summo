@@ -13,7 +13,7 @@ const CheckoutForm = ({ onSubmit, showModal, orderId, navigate }) => {
         <Form.Control
           name="name"
           type="text"
-          placeholder="Enter your full name"
+          placeholder="Full name"
           required
         />
       </Form.Group>
@@ -22,7 +22,7 @@ const CheckoutForm = ({ onSubmit, showModal, orderId, navigate }) => {
         <Form.Control
           name="email"
           type="email"
-          placeholder="Enter your email address"
+          placeholder="Email address"
           required
         />
       </Form.Group>
@@ -31,7 +31,7 @@ const CheckoutForm = ({ onSubmit, showModal, orderId, navigate }) => {
         <Form.Control
           name="phone"
           type="number"
-          placeholder="Enter your phone number"
+          placeholder="Phone number"
           required
         />
       </Form.Group>

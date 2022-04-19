@@ -5,7 +5,7 @@ import ItemCardContainer from "./ItemCard/ItemCardContainer";
 const ItemsList = ({products}) => {
   return (
     <>
-    <Row className="me-3" md="4">
+    <Row className="mx-auto" sm={2} md={3} lg={4}>
       {products.map((element) => (
         <Col key={element.id}>
           <ItemCardContainer productData={element} />
