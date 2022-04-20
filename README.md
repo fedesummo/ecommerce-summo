@@ -9,7 +9,7 @@ El sitio fue construido con la librería de JavaScript "React". Para el estilado
 Las rutas fueron definidas con la librería "React-Router-DOM", y los datos fueron almacenados en el servicio "Firebase" cuya librería también fue integrada al proyecto.
 
 ### Ejecución de la aplicación.
-El sitio se encuentra publicado en la plataforma Heroku, para acceder haga click [aquí](https://prismatic-bubblegum-6dea5b.netlify.app/).
+El sitio se encuentra publicado en la plataforma Netlify, para acceder haga click [aquí](https://prismatic-bubblegum-6dea5b.netlify.app/).
 Si desea compilar el sitio en un servidor local, puede hacerlo realizando los siguientes pasos:
 1. Clonar el repositorio.
 2. Acceder a la carpeta raíz del proyecto e instalar las dependencias ejecutando el comando `npm i` desde la consola.
