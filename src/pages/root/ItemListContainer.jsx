@@ -1,12 +1,14 @@
+import { collection, getFirestore, getDocs, where, query } from "firebase/firestore"
+import Loading from "../../components/Loading/Loading";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { collection, getFirestore, getDocs, where, query } from "firebase/firestore"
 import ItemList from "./ItemsList";
-import Loading from "../../components/Loading/Loading";
 
 const ItemListContainer = () => {
   const { category } = useParams();
+
   const [products, setProducts] = useState()
+  const [isLoading, setIsLoading] = useState(true)
 
   const getAll = async () => {
     try {
@@ -18,21 +20,24 @@ const ItemListContainer = () => {
       setProducts(
         res.docs.map( element => ({id: element.id, ...element.data()}) )
       )
+      setIsLoading(false)
     } catch(err) {
       console.log(err)
     }
   }
 
   useEffect(
-    () => getAll(),
+    () => {
+      getAll()
+      setIsLoading(true)
+    },
     [category]
   )
 
   return <>
-    { products
-        ? <ItemList products={products} />
-        : <Loading/>
-    }
+    { isLoading
+        ? <Loading/>
+        : <ItemList products={products} /> }
   </>
 };
 

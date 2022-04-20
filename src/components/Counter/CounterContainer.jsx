@@ -1,17 +1,13 @@
-// Importing react hooks.
-import { useState } from "react";
-// Importing context.
 import { useCartContext } from "../../context/CartContext";
-// Importing project component.
+import { useState } from "react";
 import Counter from "./Counter"
 
 const CounterContainer = ({data, setIsAddedToCart}) => {
-  // Extracting functions from context.
   const { addItem } = useCartContext()
-  // Setting component state.
+
   const [stock, setStock] = useState(data.stock);
   const [quantity, setQuantity] = useState(0);
-  // Defining functions
+
   const increment = () => {
     if (quantity < data.stock) {
       setQuantity(quantity + 1);

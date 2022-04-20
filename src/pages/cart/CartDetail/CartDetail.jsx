@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 
 const CartDetail = () => {
-  const { removeItem, cart, totalPrice } = useCartContext()
+  const { removeItem, cart, totalPrice, clear } = useCartContext()
   
   return(
   <Table>
@@ -19,7 +19,7 @@ const CartDetail = () => {
           </thead>
           <tbody>
             { cart.map(
-              element => <tr>
+              element => <tr key={element.item.id}>
                             <td>
                               <Row>
                                 <Col>
@@ -49,6 +49,11 @@ const CartDetail = () => {
               <th></th>
               <th></th>
               <th>Total Price: <span className="fw-normal">${totalPrice()} USD</span></th>
+              <th>
+                <Button variant="outline-dark" onClick={ () => clear() }>
+                  Clear cart
+                </Button>
+              </th>
             </tr>
           </tfoot>
         </Table>

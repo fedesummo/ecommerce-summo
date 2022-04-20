@@ -1,4 +1,3 @@
-// Importing project components.
 import NavBar from "./NavBar";
 
 const NavBarContainer = () => {

@@ -1,11 +1,8 @@
-// Importing react-bootstrap components.
-import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-
-// Importing project components.
 import CartWidget from "../CartWidget/CartWidget";
- import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 
 const NavBar = () => {
   return (
@@ -13,7 +10,7 @@ const NavBar = () => {
       <Container>
         <Navbar.Brand>
           <Link className="text-light text-decoration-none" to="/">
-            techC<i className="bi bi-tropical-storm"/>mmerce
+            techCommerce
             </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

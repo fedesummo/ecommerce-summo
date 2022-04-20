@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col"
 
 const CartContainer = () => {
   const { cart } = useCartContext()
+  
   return(<>
   {cart.length > 0
     ? <Row className="vw-100">

@@ -1,11 +1,12 @@
+import { doc, getDoc, getFirestore } from "firebase/firestore";
+import Loading from "../../components/Loading/Loading";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { doc, getDoc, getFirestore } from "firebase/firestore";
 import ItemDetail from "./ItemDetail";
-import Loading from "../../components/Loading/Loading";
 
 const ItemDetailContainer = () => {
   const { productId } = useParams()
+
   const [product, setProduct] = useState()
   const [isAddedToCart, setIsAddedToCart] = useState(false)
 

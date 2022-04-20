@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import ItemCard from "../ItemCard/ItemCard"
 
 const ItemCardContainer = ({productData}) => {

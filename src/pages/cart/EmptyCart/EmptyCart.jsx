@@ -1,6 +1,6 @@
 import Stack from "react-bootstrap/Stack"
-import sadCartImg from "./sad-cart.png"
 import { Link } from "react-router-dom"
+import sadCartImg from "./sad-cart.png"
 
 const EmptyCart = () =>
     <Stack className="align-items-center" gap={3}>

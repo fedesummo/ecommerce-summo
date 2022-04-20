@@ -1,7 +1,5 @@
-// Importing project components.
+import { Outlet } from "react-router-dom"
 import NavBar from "./NavBar/NavBar"
-// Importing react-router-dom components.
-import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (

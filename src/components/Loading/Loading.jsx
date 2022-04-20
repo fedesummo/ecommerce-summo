@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 
 const Loading = () => {
   return (
-    <Container className="d-flex justify-content-center gap-3">
+    <Container className="mt-4 d-flex justify-content-center gap-3">
       <Spinner animation="border" role="status"/>
       <p style={{fontSize: "2rem"}}>Loading, please wait...</p>
     </Container>

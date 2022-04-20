@@ -7,7 +7,7 @@ import Row from "react-bootstrap/Row"
 const CheckoutForm = ({ onSubmit, showModal, orderId, navigate }) => {
   const { clear } = useCartContext()
   return <>
-    <Form onSubmit={onSubmit} method="post">
+    <Form onSubmit={onSubmit} method="post" autoComplete="off">
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Full name</Form.Label>
         <Form.Control
